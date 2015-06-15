@@ -2,9 +2,9 @@
 using System.IO;
 
 
-namespace PcdLoader.Loader.Loaders {
+namespace OmeLoader.Loader.Loaders {
 
-    public interface IPcdLoader {
+    public interface IOmeLoader {
 
         LoadResult Load(Stream lineStream);
     }

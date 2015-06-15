@@ -1,8 +1,8 @@
 
-using PcdLoader.Loader.Data.OctreeData;
+using OmeLoader.Loader.Data.OctreeData;
 
 
-namespace PcdLoader.Loader.Data.DataStore {
+namespace OmeLoader.Loader.Data.DataStore {
 
     public interface IOctreeDataStore {
 

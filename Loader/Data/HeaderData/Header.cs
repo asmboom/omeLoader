@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace PcdLoader.Loader.Data.HeaderData {
+namespace OmeLoader.Loader.Data.HeaderData {
 
     public class Header {
 

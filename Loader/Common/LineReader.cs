@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 
 
-namespace PcdLoader.Loader.Common {
+namespace OmeLoader.Loader.Common {
 
     public class LineReader : BinaryReader {
 

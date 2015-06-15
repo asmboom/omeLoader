@@ -6,10 +6,10 @@ using System.Text;
 
 using UnityEngine;
 
-using PcdLoader.Loader.Common;
+using OmeLoader.Loader.Common;
 
 
-namespace PcdLoader.Loader.Loaders {
+namespace OmeLoader.Loader.Loaders {
 
     public abstract class LoaderBase {
 

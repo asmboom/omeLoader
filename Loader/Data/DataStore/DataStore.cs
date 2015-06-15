@@ -5,12 +5,12 @@ using System.Linq;
 
 using UnityEngine;
 
-using PcdLoader.Loader.Common;
-using PcdLoader.Loader.Data.HeaderData;
-using PcdLoader.Loader.Data.OctreeData;
+using OmeLoader.Loader.Common;
+using OmeLoader.Loader.Data.HeaderData;
+using OmeLoader.Loader.Data.OctreeData;
 
 
-namespace PcdLoader.Loader.Data.DataStore {
+namespace OmeLoader.Loader.Data.DataStore {
 
     public class DataStore : IDataStore, IHeaderDataStore, IOctreeDataStore, ITriangleDataStore, IIndexDataStore, IVertexDataStore {
 

@@ -15,7 +15,7 @@ public class TerrainPool : MonoBehaviour {
 		go.AddComponent("MeshFilter");
 		go.AddComponent("MeshCollider");
 		go.AddComponent("MeshRenderer");
-		go.AddComponent("PcdGenerator");
+		go.AddComponent("OmeGenerator");
 
         return go;
     }

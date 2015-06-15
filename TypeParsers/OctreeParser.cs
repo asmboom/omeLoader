@@ -6,14 +6,14 @@ using System.Linq;
 
 using UnityEngine;
 
-using PcdLoader.Loader.Data;
-using PcdLoader.Loader.Common;
-using PcdLoader.Loader.Data.DataStore;
-using PcdLoader.Loader.Data.OctreeData;
-using PcdLoader.Loader.TypeParsers.Interfaces;
+using OmeLoader.Loader.Data;
+using OmeLoader.Loader.Common;
+using OmeLoader.Loader.Data.DataStore;
+using OmeLoader.Loader.Data.OctreeData;
+using OmeLoader.Loader.TypeParsers.Interfaces;
 
 
-namespace PcdLoader.Loader.TypeParsers {
+namespace OmeLoader.Loader.TypeParsers {
 
     public class OctreeParser : TypeParserBase, IOctreeParser {
 

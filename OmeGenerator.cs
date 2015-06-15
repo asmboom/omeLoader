@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[AddComponentMenu("PcdGenerator/PcdGenerator")]
-public class PcdGenerator: MonoBehaviour {
+[AddComponentMenu("OmeGenerator/OmeGenerator")]
+public class OmeGenerator: MonoBehaviour {
 
     public bool update  = false;
     public bool debug   = false;
@@ -72,14 +72,14 @@ public class PcdGenerator: MonoBehaviour {
 
         for ( int i = 0; i < _mesh.vertices.Length; i++ ) {
 
-            Debug.Log("PcdGenerator: Debug:     Vertex[" + i + "]:<" +  _mesh.vertices[i][0] + "," +
+            Debug.Log("OmeGenerator: Debug:     Vertex[" + i + "]:<" +  _mesh.vertices[i][0] + "," +
                                                                         _mesh.vertices[i][1] + "," +
                                                                         _mesh.vertices[i][2] + ">");
         }
 
         for ( int i = 0; i < _mesh.triangles.Length; i++ ) {
 
-            Debug.Log("PcdGenerator: Debug:     Triangle[" + _mesh.triangles[i] + "]");
+            Debug.Log("OmeGenerator: Debug:     Triangle[" + _mesh.triangles[i] + "]");
         }
     }
 

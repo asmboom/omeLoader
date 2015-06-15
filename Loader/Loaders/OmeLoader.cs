@@ -7,16 +7,16 @@ using System.Threading;
 
 using UnityEngine;
 
-using PcdLoader.Loader.Common;
-using PcdLoader.Loader.Data.DataStore;
-using PcdLoader.Loader.Data.HeaderData;
-using PcdLoader.Loader.Data.OctreeData;
-using PcdLoader.Loader.TypeParsers.Interfaces;
+using OmeLoader.Loader.Common;
+using OmeLoader.Loader.Data.DataStore;
+using OmeLoader.Loader.Data.HeaderData;
+using OmeLoader.Loader.Data.OctreeData;
+using OmeLoader.Loader.TypeParsers.Interfaces;
 
 
-namespace PcdLoader.Loader.Loaders {
+namespace OmeLoader.Loader.Loaders {
 
-    public class PcdLoader : LoaderBase, IPcdLoader {
+    public class OmeLoader : LoaderBase, IOmeLoader {
 
         private readonly IDataStore _dataStore;
         private readonly IOctreeParser _octreeParser;
@@ -24,7 +24,7 @@ namespace PcdLoader.Loader.Loaders {
         private readonly IIndexParser _indexParser;
         private readonly IVertexParser _vertexParser;
 
-        public PcdLoader(   IDataStore dataStore, IOctreeParser octreeParser, ITriangleParser triangleParser,
+        public OmeLoader(   IDataStore dataStore, IOctreeParser octreeParser, ITriangleParser triangleParser,
                             IIndexParser indexParser, IVertexParser vertexParser ) {
 
             _headerLineCount = 11;
@@ -119,20 +119,6 @@ namespace PcdLoader.Loader.Loaders {
                     _octleaves = System.Convert.ToInt32(data);
                 }
             }
-
-            //
-            // move to function
-            //
-            // Debug.Log("PcdLoader: ParseHeader: _version: " + _version);
-            // Debug.Log("PcdLoader: ParseHeader: _fields: " + _fields);
-            // Debug.Log("PcdLoader: ParseHeader: _size: " + _size);
-            // Debug.Log("PcdLoader: ParseHeader: _type: " + _type);
-            // Debug.Log("PcdLoader: ParseHeader: _count: " + _count);
-            // Debug.Log("PcdLoader: ParseHeader: _width: " + _width);
-            // Debug.Log("PcdLoader: ParseHeader: _height: " + _height);
-            // Debug.Log("PcdLoader: ParseHeader: _viewpoint: " + _viewpoint);
-            // Debug.Log("PcdLoader: ParseHeader: _points: " + _points);
-            // Debug.Log("PcdLoader: ParseHeader: _octleaves: " + _octleaves);
 
             var header = new Header(    _version, _fields, _size, _type, _count, _width, _height,
                                         _viewpoint, _points, _octleaves );

@@ -1,9 +1,9 @@
 ﻿
-using PcdLoader.Loader.Common;
-using PcdLoader.Loader.TypeParsers.Interfaces;
+using OmeLoader.Loader.Common;
+using OmeLoader.Loader.TypeParsers.Interfaces;
 
 
-namespace PcdLoader.Loader.TypeParsers {
+namespace OmeLoader.Loader.TypeParsers {
 
     public abstract class TypeParserBase : ITypeParser {
 

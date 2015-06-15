@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace PcdLoader.Loader.Data.OctreeData {
+namespace OmeLoader.Loader.Data.OctreeData {
 
     public class Octree {
 

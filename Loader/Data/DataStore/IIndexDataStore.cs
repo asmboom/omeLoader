@@ -1,6 +1,6 @@
 
 
-namespace PcdLoader.Loader.Data.DataStore {
+namespace OmeLoader.Loader.Data.DataStore {
 
     public interface IIndexDataStore {
 

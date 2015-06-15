@@ -3,7 +3,7 @@ using System;
 using System.Globalization;
 
 
-namespace PcdLoader.Loader.Common {
+namespace OmeLoader.Loader.Common {
 
     public static class StringExtensions {
 

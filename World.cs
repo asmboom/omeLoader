@@ -9,10 +9,10 @@ using UnityEngine;
 
 using Geodesy;
 
-using PcdLoader.Loader.Data.OctreeData;
-using PcdLoader.Loader.Data.DataStore;
-using PcdLoader.Loader.Loaders;
-using PcdLoader.Loader.TypeParsers;
+using OmeLoader.Loader.Data.OctreeData;
+using OmeLoader.Loader.Data.DataStore;
+using OmeLoader.Loader.Loaders;
+using OmeLoader.Loader.TypeParsers;
 
 
 public class World : MonoBehaviour {
@@ -22,15 +22,15 @@ public class World : MonoBehaviour {
     public GameObject TerrainCache;
 	public GameObject MaterialCache;
 
-	public PcdGenerator[] _chunks;
+	public OmeGenerator[] _chunks;
 
 	public string url;
-    public string pcdFilePath;
+    public string omeFileUrl;
 
     public bool debug = false;
 
-    private PcdLoaderFactory _omeLoaderFactory = new PcdLoaderFactory();
-    private IPcdLoader _omeLoader;
+    private OmeLoaderFactory _omeLoaderFactory = new OmeLoaderFactory();
+    private IOmeLoader _omeLoader;
 
     private Stream _omeStream;
     private byte[] _omeFileBytes;
@@ -61,7 +61,7 @@ public class World : MonoBehaviour {
 
         _terrainCache = TerrainCache.GetComponent<TerrainPool>;
 
-        _omeLoaderFactory = new PcdLoaderFactory();
+        _omeLoaderFactory = new OmeLoaderFactory();
         _omeLoader = _omeLoaderFactory.Create();
 
         url = "jar:file://" + Application.dataPath + "!/assets/OME/Whistler.ome";
@@ -97,7 +97,7 @@ public class World : MonoBehaviour {
 		        	_vertices.Add( _loadResult.Vertices[i] );
 				}
 
-				_chunks = new PcdGenerator[_octrees.Count];
+				_chunks = new OmeGenerator[_octrees.Count];
 				_loaded = true;
 			}
 		}
@@ -118,7 +118,7 @@ public class World : MonoBehaviour {
         var go = _terrainCache.Borrow(node);
         go.renderer.material = _material;
 
-        var octmesh = go.GetComponent("PcdGenerator") as PcdGenerator;
+        var octmesh = go.GetComponent("OmeGenerator") as OmeGenerator;
     	octmesh.AddVertices(_octrees[index].Indices);
     	octmesh.AddTriangles(_octrees[index].Triangles);
 		octmesh.index = index;
@@ -132,7 +132,7 @@ public class World : MonoBehaviour {
 
         var go = _chunks[index].gameObject;
 
-        var octmesh = go.GetComponent("PcdGenerator") as PcdGenerator;
+        var octmesh = go.GetComponent("OmeGenerator") as OmeGenerator;
         octmesh.ClearMesh();
 
         _terrainCache.Release(go);

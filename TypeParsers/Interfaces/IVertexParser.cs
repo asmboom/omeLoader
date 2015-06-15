@@ -1,6 +1,6 @@
 
 
-namespace PcdLoader.Loader.TypeParsers.Interfaces {
+namespace OmeLoader.Loader.TypeParsers.Interfaces {
 
     public interface IVertexParser : ITypeParser {
 
